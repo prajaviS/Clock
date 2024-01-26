@@ -1,0 +1,31 @@
+//clock page
+let hour = document.getElementById("hour");
+let minute = document.getElementById("minute")
+let second = document.getElementById("second")
+setInterval(() => {
+    let date = new Date()
+    let h = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
+    hour.innerHTML = h;
+    minute.innerHTML = m;
+    second.innerHTML = s;
+}, 1000)
+//timer page
+let cnt = 60;
+let timer = document.getElementById("timer");
+let intervalid = setInterval(() => {
+    cnt--;
+    timer.innerHTML = `${cnt}`
+    if (cnt == 0) {
+        alert("Time's up")
+        clearInterval(intervalid)
+    }
+}, 1000);
+//date page
+let date = document.getElementById("date")
+setInterval(() => {
+    let today = new Date().toDateString();
+    date.innerHTML = today;
+}, 1000);
+
