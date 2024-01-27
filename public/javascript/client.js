@@ -11,21 +11,4 @@ setInterval(() => {
     minute.innerHTML = m;
     second.innerHTML = s;
 }, 1000)
-//timer page
-let cnt = 60;
-let timer = document.getElementById("timer");
-let intervalid = setInterval(() => {
-    cnt--;
-    timer.innerHTML = `${cnt}`
-    if (cnt == 0) {
-        alert("Time's up")
-        clearInterval(intervalid)
-    }
-}, 1000);
-//date page
-let date = document.getElementById("date")
-setInterval(() => {
-    let today = new Date().toDateString();
-    date.innerHTML = today;
-}, 1000);
 
